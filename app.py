@@ -75,3 +75,10 @@ async def predict(file: UploadFile = File(...)):
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
+app = FastAPI(
+    title="Brick Analyzer API",
+    description="Upload a brick image to classify its type.",
+    version="1.0",
+    docs_url="/docs",  # Ensure docs are enabled
+    redoc_url="/redoc",  # Alternative documentation
+)
