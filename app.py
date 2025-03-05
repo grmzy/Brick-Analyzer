@@ -1,3 +1,11 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "Brick Analyzer API is running!"}
+
 from fastapi import FastAPI, File, UploadFile
 from tensorflow import keras
 import numpy as np
