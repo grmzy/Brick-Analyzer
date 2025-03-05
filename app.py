@@ -7,13 +7,13 @@ import os
 import gdown
 
 # Google Drive File ID (Replace with actual ID if needed)
-GOOGLE_DRIVE_FILE_ID = "YOUR_FILE_ID_HERE"
+GOOGLE_DRIVE_FILE_ID = "1B7FKnGXRX4RMx_b2w_j-O9oWHbbSQZe-"
 MODEL_PATH = "brick_classifier.keras"
 
 # Download the model if it doesn't exist
 if not os.path.exists(MODEL_PATH):
     print("Downloading model from Google Drive...")
-    gdown.download(f"https://drive.google.com/uc?id={GOOGLE_DRIVE_FILE_ID}", MODEL_PATH, quiet=False)
+    gdown.download(f"https://drive.google.com/uc?id=1B7FKnGXRX4RMx_b2w_j-O9oWHbbSQZe-", MODEL_PATH, quiet=False)
 
 # Load the trained model
 model = keras.models.load_model(MODEL_PATH)
